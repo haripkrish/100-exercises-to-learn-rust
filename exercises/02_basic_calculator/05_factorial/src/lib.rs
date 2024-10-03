@@ -9,6 +9,22 @@
 // `factorial(2)` to return `2`, and so on.
 //
 // Use only what you learned! No loops yet, so you'll have to use recursion!
+fn factorial(n: i32) -> i32 {
+    // Base case: print the result when base case is reached
+    if n <= 1 {
+        1
+    } else {
+        // Recursive case: calculate factorial(n - 1)
+        let result = n * factorial(n - 1);
+        result
+    }
+}
+
+fn main() {
+    let number = 5;
+    let result = factorial(number);
+    println!("Factorial of {} is: {}", number, result);
+}
 
 #[cfg(test)]
 mod tests {
